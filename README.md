@@ -2,7 +2,7 @@
 
 Welcome to this repository. It was started on December 9th 2022 and I am trying to recreate the Titanic with pure CSS and HTML.
 
-# Why vw ? 
+## Why vw ? 
 I used vw for most of my dimensions so drawing wouldn't get destroyed when upscaling or downscaling the screen. It is still a work in progress, of course.
 
 
