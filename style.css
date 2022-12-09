@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:rgb(15, 15, 43);
+    background-image:linear-gradient(45deg, rgb(199, 125, 125), blue);
+    overflow-x:hidden;
+}
+
+.moon{
+    height:10vw;
+    width:10vw;
+    position:absolute;
+    left:10vw;
+    top: 10vh;
+    background-color:rgb(248, 248, 234);
+    border-radius:100%;
+    box-shadow:0px 0px 10px rgba(248, 248, 234,0.5), 0px 0px 80px rgba(248, 248, 234,0.2), 0px 0px 40px rgba(248, 248, 234,0.5), inset 0 0 10px #9c9797;
+    filter:blur(0.5px)
+}
+
+.moon::before{
+    content: " ";
+    display:block;
+    height:10px;
+    width:10px;
+    background-color:#c9c9c9;
+    filter:blur(5px);
+    position:absolute;
+    left:10px;
+    top:10px;
+
+}
+
+.moon::after{
+    content: " ";
+    display:block;
+    height:10px;
+    width:10px;
+    background-color:#c9c9c9;
+    filter:blur(5px);
+    position:absolute;
+    right:10px;
+    bottom:20px;
+
+}
+
+.sea{
+    width:100vw;
+    height:30vh;
+    position:absolute;
+    bottom:0;
+    background-color:#0e0a2b;
+    box-shadow:inset 0 5vw 20vw black, 0 0 15px rgba(27, 31, 66,0.5);
+}
+
+.boat-container{
+    position:absolute;
+    left:50%;
+    bottom:30vh;
+    height:50vh;
+    transform:translateX(-50%) translateY(50%);
+    display:flex;
+    align-items:flex-end;
+  /*  transform:rotate(45deg);
+    clip-path:circle(40vh at top center);*/
+}
+.boat{
+    background-color:black;
+    height:100px;
+    width:80vw;
+    border-radius:0 0 70% 50%;
+    position:relative;
+    top:-14vh;
+    z-index:9;
+}
+
+.boat::before{
+    content: " ";
+    display:block;
+    height:50px;
+    width:inherit;
+    border-radius:0 0 50% 50%;
+    background-image:linear-gradient(0deg, rgb(13, 17, 49), rgb(73, 18, 18));
+    position:absolute;
+    bottom:0px; 
+}
+
+.chemneys{
+    position:absolute;
+    width:100%;
+    left:60%;
+    transform:translateX(-30%);
+    top:-50px;
+
+}
+
+
+.chemney{
+    height:20vh;
+    width:5vw;
+    position:absolute;
+    background-image: linear-gradient(135deg, rgb(155, 61, 61) 20%, rgb(90, 14, 14) 50%);
+
+}
+.chemney1{
+    left:10vw;
+}
+.chemney2{
+    left:20vw;
+}
+.chemney3{
+    left:30vw;
+}
+
+.chemney::before{
+    content:" ";
+    display:block;
+    height:5vh;
+    width:5vw;
+    position:absolute;
+    background-color:rgb(0, 0, 0);
+}
+
+.decks{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+}
+
+.deck{
+
+    background-color:rgb(148, 148, 148);
+    position:absolute;
+    left:50%;
+    height:15px;
+    border-radius:5px 5px 0px 0px;
+    transform:translateX(-50%);
+}
+
+.deck1{
+    width:90%;
+    bottom:180px;
+}
+
+.deck2{
+    width:80%;
+    bottom:190px;
+}
+
+.deck3{
+    width:70%;
+    bottom:200px;
+}
