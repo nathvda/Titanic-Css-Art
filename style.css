@@ -10,12 +10,13 @@ body{
     overflow-x:hidden;
 }
 
+
 .moon{
     height:10vw;
     width:10vw;
     position:absolute;
     left:10vw;
-    top: 10vh;
+    top: 10vw;
     background-color:rgb(248, 248, 234);
     border-radius:100%;
     box-shadow:0px 0px 10px rgba(248, 248, 234,0.5), 0px 0px 80px rgba(248, 248, 234,0.2), 0px 0px 40px rgba(248, 248, 234,0.5), inset 0 0 10px #9c9797;
@@ -25,32 +26,34 @@ body{
 .moon::before{
     content: " ";
     display:block;
-    height:10px;
-    width:10px;
-    background-color:#c9c9c9;
-    filter:blur(5px);
+    height:2vw;
+    width:2vw;
+    background-color:#c9c9c9b9;
+    filter:blur(10px);
+    border-radius:100%;
     position:absolute;
-    left:10px;
-    top:10px;
+    left:2vw;
+    top:2vw;
 
 }
 
 .moon::after{
     content: " ";
     display:block;
-    height:10px;
-    width:10px;
-    background-color:#c9c9c9;
-    filter:blur(5px);
+    height:2vw;
+    width:2vw;
+    border-radius:100%;
+    background-color:#c9c9c996;
+    filter:blur(10px);
     position:absolute;
-    right:10px;
-    bottom:20px;
+    right:2vw;
+    bottom:2vw;
 
 }
 
 .sea{
     width:100vw;
-    height:30vh;
+    height:30vw;
     position:absolute;
     bottom:0;
     background-color:#0e0a2b;
@@ -60,101 +63,192 @@ body{
 .boat-container{
     position:absolute;
     left:50%;
-    bottom:30vh;
-    height:50vh;
+    bottom:30vw;
+    height:50vw;
     transform:translateX(-50%) translateY(50%);
     display:flex;
     align-items:flex-end;
-  /*  transform:rotate(45deg);
-    clip-path:circle(40vh at top center);*/
 }
 .boat{
-    background-color:black;
-    height:100px;
+    background-color:rgb(0, 0, 0);
+    background-image:linear-gradient(135deg, rgb(36, 36, 36), rgb(0, 0, 0));
+    height:16vw;
     width:80vw;
-    border-radius:0 0 70% 50%;
+    border-radius:0 0 50% 50%;
     position:relative;
-    top:-14vh;
     z-index:9;
 }
 
 .boat::before{
     content: " ";
     display:block;
-    height:50px;
+    height:8vw;
     width:inherit;
     border-radius:0 0 50% 50%;
-    background-image:linear-gradient(0deg, rgb(13, 17, 49), rgb(73, 18, 18));
+    background-image:
+    linear-gradient(0deg, rgb(13, 17, 49), rgb(73, 18, 18));
     position:absolute;
-    bottom:0px; 
+    bottom:0; 
 }
+
+.boat::after{
+    content: " ";
+    display:block;
+    height:10vw;
+    width:100%;
+    border-radius:0 0 50% 50%;
+    background-image:yellow;
+    position:absolute;
+}
+
+.mast1{
+    width:0.7vw;
+    height:40vw;
+    position:absolute;
+    bottom:5vw;
+    left:5vw;
+    transform:rotate(5deg);
+    background-color:rgb(99, 60, 42); 
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100% );
+}
+
+.mast2{
+    width:0.7vw;
+    height:35vw;
+    position:absolute;
+    bottom:5vw;
+    right:5vw;
+    transform:rotate(-15deg);
+    background-color:rgb(99, 60, 42);
+    clip-path: polygon(60% 0%, 50% 0%, 0% 100%, 100% 100% );
+}
+
+.cables{
+    position:absolute;
+}
+
+.cable{
+    border:1px solid rgb(102, 102, 102);
+    width:65vw;
+    height:4vw;
+    position:absolute;
+    z-index:5;
+    border-radius:100%;
+    clip-path:ellipse(100% 1.8vw at bottom center);
+}
+
+.cable1{
+    top:-43vw;
+    left:6vw;
+    transform:rotate(3deg);
+}
+
+.cable2{
+    top:-43.5vw;
+    left:6vw;
+    transform:rotate(3.5deg);
+}
+
+.cable3{
+    top:-43.3vw;
+    left:6vw;
+    transform:rotate(3.0deg);
+}
+
+
+
+
 
 .chemneys{
     position:absolute;
-    width:100%;
-    left:60%;
-    transform:translateX(-30%);
-    top:-50px;
+    width:50%;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:21vw;
+    display:grid;
+    place-content:center;
+    place-items:center;
+    grid-template-columns:repeat(4,1fr);
 
 }
 
 
 .chemney{
-    height:20vh;
-    width:5vw;
-    position:absolute;
-    background-image: linear-gradient(135deg, rgb(155, 61, 61) 20%, rgb(90, 14, 14) 50%);
+    height:8vw;
+    width:3vw;
+    transform:rotate(10deg);
+    background-image: 
+    linear-gradient(0deg, rgba(51, 7, 7,0.6) 10%, transparent 50%),
+    linear-gradient(135deg, rgb(155, 61, 61) 20%, rgb(90, 14, 14) 50%);
 
-}
-.chemney1{
-    left:10vw;
-}
-.chemney2{
-    left:20vw;
-}
-.chemney3{
-    left:30vw;
 }
 
 .chemney::before{
     content:" ";
     display:block;
-    height:5vh;
-    width:5vw;
+    height:3vw;
+    width:3vw;
     position:absolute;
     background-color:rgb(0, 0, 0);
 }
 
 .decks{
     position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-
+    height:50vw;
+    width:80vw;
+    bottom:16vw;
+    z-index:99;
+    display:flex;
+    flex-direction:column-reverse;
+    justify-content:flex-start;
+    align-items:center;
 }
 
 .deck{
-
     background-color:rgb(148, 148, 148);
-    position:absolute;
-    left:50%;
-    height:15px;
+    background-image: 
+    linear-gradient(170deg, white 20%, transparent 28% ),
+    linear-gradient(270deg, transparent 65%, rgb(252, 252, 252) 75%),
+    linear-gradient(75deg, #efefef, rgb(109, 109, 109));
+    box-shadow:inset -2px -2px 30px rgb(56, 52, 52);
+    height:2vw;
     border-radius:5px 5px 0px 0px;
-    transform:translateX(-50%);
+    place-items:center;
+    display:grid;
+    position:relative;
+}
+
+.deck::before{
+    content:" ";
+    display:block;
+    position:absolute;
+    height:.3vw;
+    width:100%;
+    top:0px;
+    background-color:rgb(182, 182, 182);
+    box-shadow:#9c9c9cd0 0px 2px 3px, inset rgb(65, 65, 65) 0 0 1px;
+}
+
+.deck div{
+    height:0.8vw;
+    width:0.8vw;
+    background-color:rgb(255, 225, 171);
+    box-shadow: inset 1px 1px 5px #555555d8, 0px 0px 1px white;
 }
 
 .deck1{
     width:90%;
-    bottom:180px;
+    grid-template-columns:repeat(18, 1fr);
+
 }
 
 .deck2{
-    width:80%;
-    bottom:190px;
+    width:70%;
+    grid-template-columns:repeat(18, 1fr);
 }
 
 .deck3{
-    width:70%;
-    bottom:200px;
+    width:50%;
+    grid-template-columns:repeat(18, 1fr);
+    
 }
