@@ -11,6 +11,9 @@ I haven't looked up the proper colors yet. As of today, December 9th, it is stil
 ## Compatibility 
 As of now, I have tested it on Chrome and Firefox, and both work quite well.
 
+2022-12-10 : 
+- Added a few basic animations.
+- Expanded moon shine.
 
 2022-12-09 :
 - Added the first forms and colors.
