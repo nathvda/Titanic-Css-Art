@@ -20,7 +20,8 @@ body{
     background-color:rgb(248, 248, 234);
     border-radius:100%;
     box-shadow:0px 0px 10px rgba(248, 248, 234,0.5), 0px 0px 80px rgba(248, 248, 234,0.2), 0px 0px 40px rgba(248, 248, 234,0.5), inset 0 0 10px #9c9797;
-    filter:blur(0.5px)
+    filter:blur(0.5px);
+    animation: moonShine 60s infinite;
 }
 
 .moon::before{
@@ -65,9 +66,10 @@ body{
     left:50%;
     bottom:30vw;
     height:50vw;
-    transform:translateX(-50%) translateY(50%);
     display:flex;
     align-items:flex-end;
+    animation: floating 2s infinite linear;
+
 }
 .boat{
     background-color:rgb(0, 0, 0);
@@ -250,5 +252,28 @@ body{
 .deck3{
     width:50%;
     grid-template-columns:repeat(18, 1fr);
+    
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform:  translateX(-50%) translateY(50%);
+    }
+
+    50% { 
+        transform:  translateX(-50%) translateY(51%);
+    }
+    
+}
+
+@keyframes moonShine {
+    0%, 100% {
+        transform:translateX(-100%) translateY(100%);
+        box-shadow:0px 0px 10px rgba(248, 248, 234,0.5), 0px 0px 80px rgba(248, 248, 234,0.2), 0px 0px 40px rgba(248, 248, 234,0.5), inset 0 0 10px #9c9797;
+    }
+    50% {
+        transform:translateX(100%) translateY(-100%); 
+        box-shadow:0px 0px 10px rgba(248, 248, 234,0.5), 0px 0px 200px rgba(248, 248, 234,0.2), 0px 0px 40px rgba(248, 248, 234,0.5), inset 0 0 10px #9c9797;
+    }
     
 }
