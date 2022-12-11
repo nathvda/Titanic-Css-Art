@@ -6,10 +6,10 @@
 
 body{
     background-color:rgb(15, 15, 43);
-    background-image:linear-gradient(45deg, rgb(199, 125, 125), blue);
     overflow-x:hidden;
+    overflow-y:hidden;
+    animation: NightAndDay 10s ease-in-out infinite alternate;
 }
-
 
 .moon{
     height:10vw;
@@ -52,13 +52,15 @@ body{
 
 }
 
+
 .sea{
     width:100vw;
     height:30vw;
     position:absolute;
     bottom:0;
     background-color:#0e0a2b;
-    box-shadow:inset 0 5vw 20vw black, 0 0 15px rgba(27, 31, 66,0.5);
+    box-shadow:inset 0 5vw 20vw rgba(0,0,0,0.4), 0 0 15px rgba(27, 31, 66,0.3);
+    animation: SeaNaD 10s ease-in-out infinite alternate;
 }
 
 .boat-container{
@@ -86,11 +88,13 @@ body{
     display:block;
     height:8vw;
     width:inherit;
-    border-radius:0 0 50% 50%;
+    border-radius: 0 0 58vw 48vw;
     background-image:
-    linear-gradient(0deg, rgb(13, 17, 49), rgb(73, 18, 18));
+    linear-gradient(0deg, rgb(13, 17, 49), rgb(150, 66, 66));
     position:absolute;
     bottom:0; 
+    left:-2.5vw;
+    width:86.5vw;
 }
 
 .boat::after{
@@ -102,6 +106,28 @@ body{
     background-image:yellow;
     position:absolute;
 }
+
+.boat-front{
+    background-color:rgb(49, 49, 49);
+    background-image:linear-gradient(91deg, rgb(53, 53, 53), rgb(35, 35, 35));
+    height:8vw;
+    width:5vw;
+    position:absolute;
+    left:-5vw;
+    clip-path:polygon(0% 0%, 70% 50%, 50% 100%, 100% 100%, 100% 0%);
+}
+
+.boat-behind{
+    background-color:rgb(46, 46, 46);
+    background-image:linear-gradient(91deg, rgb(5, 5, 5), rgb(32, 32, 32));
+    height:8vw;
+    width:5vw;
+    position:absolute;
+    z-index:99;
+    right:-5vw;
+    clip-path:polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+
 
 .mast1{
     width:0.7vw;
@@ -157,10 +183,6 @@ body{
     transform:rotate(3.0deg);
 }
 
-
-
-
-
 .chemneys{
     position:absolute;
     width:50%;
@@ -178,10 +200,10 @@ body{
 .chemney{
     height:8vw;
     width:3vw;
-    transform:rotate(10deg);
+    transform:rotate(-10deg);
     background-image: 
     linear-gradient(0deg, rgba(51, 7, 7,0.6) 10%, transparent 50%),
-    linear-gradient(135deg, rgb(155, 61, 61) 20%, rgb(90, 14, 14) 50%);
+    linear-gradient(135deg, rgb(104, 66, 10) 20%, rgb(160, 97, 26) 50%);
 
 }
 
@@ -229,13 +251,134 @@ body{
     top:0px;
     background-color:rgb(182, 182, 182);
     box-shadow:#9c9c9cd0 0px 2px 3px, inset rgb(65, 65, 65) 0 0 1px;
+
 }
 
 .deck div{
     height:0.8vw;
     width:0.8vw;
+    position:relative;
     background-color:rgb(255, 225, 171);
+    animation:windowParty 10s ease-in-out infinite alternate;
     box-shadow: inset 1px 1px 5px #555555d8, 0px 0px 1px white;
+}
+
+.deck div:hover:before{
+    content:" ";
+    display: block;
+    height:0.8vw;
+    width:0vw;
+    border-radius: 100% 0;
+    background-color:rgb(128, 128, 128);
+    transition:0.3s;
+}
+
+.deck div:after{
+    content:" ";
+    display: block;
+    height:0.8vw;
+    width:0.3vw;
+    position:absolute;
+    right:0;
+    top:0;
+    border-radius: 0 0 0 100%;
+    background-color:rgb(128, 128, 128);
+    transition:0.3s;
+    animation:windowOpening 10s ease-in-out infinite alternate;
+}
+
+.deck div:hover:after{
+    content:" ";
+    display: block;
+    height:0.8vw;
+    width:0vw;
+    position:absolute;
+    right:0;
+    top:0;
+    border-radius: 0 0 0 100%;
+    background-color:rgb(128, 128, 128);
+    transition:0.3s;
+}
+
+.deck div:before{
+    content:" ";
+    display: block;
+    height:0.8vw;
+    width:0.3vw;
+    border-radius: 100% 0;
+    background-color:rgb(128, 128, 128);
+    transition:0.3s;
+    transition-delay: 0.3s;
+    animation:windowOpening 10s ease-in-out infinite alternate;
+
+}
+
+.cloud{
+    width:100px;
+    height:100px;
+    margin-top:5vw;
+    position:relative;
+    z-index:99;
+    filter:blur(1px);
+}
+
+.cloud1{
+    animation: cloudTravel 8s infinite reverse linear;
+
+}
+
+.cloud2{
+    animation: cloudTravel 3s infinite reverse linear;
+
+}
+
+.cloud3{
+    animation: cloudTravel 5s infinite reverse linear;
+
+}
+
+.cloud div{
+    background-color:white;
+    width:50px;
+    height:50px;
+    border-radius:100px;
+    position:absolute;
+}
+
+.cloud div:nth-of-type(1){
+    width:8vw;
+    height:8vw;
+    right:-20px;
+}
+
+.cloud div:nth-of-type(2){
+    width:8vw;
+    height:8vw;
+    top:-2vw;
+}
+
+.cloud div:nth-of-type(3){
+    background-color:white;
+    width:9vw;
+    height:9vw;
+    left:-5vw;
+    bottom:2vw;
+}
+
+
+
+.deck div:after{
+    content:" ";
+    display: block;
+    height:0.8vw;
+    width:0.3vw;
+    position:absolute;
+    right:0;
+    top:0;
+    border-radius: 0 0 0 100%;
+    background-color:rgb(128, 128, 128);
+    transition:0.3s;
+    transition-delay: 0.3s;
 }
 
 .deck1{
@@ -253,6 +396,23 @@ body{
     width:50%;
     grid-template-columns:repeat(18, 1fr);
     
+}
+
+.seaboat{
+    width:100vw;
+    height:18vw;
+    border:5vw solid rgb(39, 80, 80);
+    border-width:0 0 5px;
+    border-radius:5vw;
+    backdrop-filter:blur(8px);
+    position:relative;
+    z-index:100;
+    background-color:rgb(0, 20, 20);
+    transform:rotate(180deg) translateY(-20vw);
+    filter:blur(8px);
+    animation: SeaNaD 10s ease-in-out infinite alternate;
+    opacity:0.8;
+
 }
 
 @keyframes floating {
@@ -276,4 +436,73 @@ body{
         box-shadow:0px 0px 10px rgba(248, 248, 234,0.5), 0px 0px 200px rgba(248, 248, 234,0.2), 0px 0px 40px rgba(248, 248, 234,0.5), inset 0 0 10px #9c9797;
     }
     
+}
+
+@keyframes NightAndDay {
+    0%{
+        background-color:rgb(15, 15, 43);
+    }
+
+    25%, 30%{
+        background-color: rgb(151, 87, 26);
+    }
+
+    100%{
+        background-color: rgb(111, 195, 216);
+    }
+}
+
+@keyframes SeaNaD {
+    0%{
+        background-color:rgb(15, 15, 43);
+    }
+
+    25%, 30%{
+        background-color: rgb(73, 36, 1);
+    }
+
+    100%{
+        background-color: rgb(26, 79, 92);
+    }
+}
+
+@keyframes windowOpening {
+    0%{
+        width:0.3vw;
+    }
+
+    25%, 30%{
+        width:0.3vw;
+    }
+
+    100%{
+        width:0vw;
+    }
+}
+
+@keyframes windowParty {  
+    0%{
+    background-color:rgb(228, 181, 52);
+}
+
+25%, 30%{
+    background-color: rgb(248, 211, 4);
+}
+
+100%{
+    background-color: rgb(13, 15, 15);
+}
+    
+}
+
+
+@keyframes cloudTravel { 
+    from{
+        transform:translateX(-50vw);
+
+    }
+
+    to{
+        transform:translateX(100vw);
+    }
 }
