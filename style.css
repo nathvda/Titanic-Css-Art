@@ -302,7 +302,7 @@ body{
 
 .ladders div{
     background-color:rgb(202, 148, 49);
-    box-shadow:0 1px 1px black;
+    box-shadow:0 1px 1px rgba(0,0,0,0.4);
     height:0.1vh;
     width:1vw;
     margin-left:2vw;
@@ -415,13 +415,11 @@ body{
     transition:0.3s;
     transition-delay: 0.3s;
     animation:windowOpening 10s ease-in-out infinite alternate;
-
 }
 
 .cloud{
     width:5rem;
     height:5rem;
-    margin-top:5vw;
     position:relative;
     z-index:99;
     filter:blur(1px);
@@ -508,19 +506,109 @@ body{
 }
 
 .seaboat{
-    width:100vw;
-    height:18vw;
-    border:5vw solid rgb(39, 80, 80);
+    width:8vw;
+    height:9vw;
+    bottom:2vh;
     border-width:0 0 5px;
-    border-radius:5vw;
+    border-radius:90rem 80rem 90rem 80rem;
     backdrop-filter:blur(8px);
-    position:relative;
+    position:absolute;
     z-index:100;
     background-color:rgb(0, 20, 20);
     transform:rotate(180deg) translateY(-20vw);
-    filter:blur(8px);
-    animation: SeaNaD 10s ease-in-out infinite alternate;
+    filter:blur(0.8rem);
     opacity:0.8;
+}
+
+.seaboat:nth-of-type(1){
+    left:7vw;
+    animation: SeaWaves 1s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+}
+
+.seaboat:nth-of-type(2){
+    left:14vw;
+    animation: SeaWaves 2s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+
+}
+
+.seaboat:nth-of-type(3){
+    left:21vw;
+    animation: SeaWaves 1.5s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+
+}
+
+.seaboat:nth-of-type(4){
+    left:26vw;
+    animation: SeaWaves 1s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+
+}
+
+.seaboat:nth-of-type(5){
+    left:33vw;
+    animation: SeaWaves 2s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+}
+
+.seaboat:nth-of-type(6){
+    left:36vw;
+    animation: SeaWaves 1.5s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+
+}
+
+.seaboat:nth-of-type(7){
+    left:40vw;
+    animation: SeaWaves 1s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+
+}
+
+.seaboat:nth-of-type(8){
+    left:45vw;
+    animation: SeaWaves 1.5s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+
+}
+
+.seaboat:nth-of-type(9){
+    left:50vw;
+    animation: SeaWaves 2s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+}
+
+.seaboat:nth-of-type(10){
+    left:55vw;
+    animation: SeaWaves 1.5s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+
+}
+
+.seaboat:nth-of-type(11){
+    left:62vw;
+    animation: SeaWaves 1s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+
+}
+
+.seaboat:nth-of-type(12){
+    left:68vw;
+    animation: SeaWaves 1.5s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+
+}
+
+.seaboat:nth-of-type(13){
+    left:72vw;
+    animation: SeaWaves 2s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+}
+
+.seaboat:nth-of-type(14){
+    left:79vw;
+    animation: SeaWaves 1.5s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+
+}
+
+.seaboat:nth-of-type(15){
+    left:80vw;
+    animation: SeaWaves 1s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
+
+}
+
+.seaboat:nth-of-type(16){
+    left:85vw;
+    animation: SeaWaves 1.5s linear infinite, SeaNaD 10s ease-in-out infinite alternate;
 
 }
 
@@ -559,6 +647,12 @@ body{
     100%{
         background-color: rgb(111, 195, 216);
     }
+}
+
+@keyframes SeaWaves{
+    from{transform:rotate(360deg);}
+    to{transform:rotate(0deg);}
+
 }
 
 @keyframes SeaNaD {
