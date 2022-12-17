@@ -289,6 +289,25 @@ body{
     animation:smoke 2s infinite;
 }
 
+.ladders{
+    position:absolute;
+    height:90%;
+    padding-top:2vw;
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction:column;
+    
+}
+
+.ladders div{
+    background-color:rgb(202, 148, 49);
+    box-shadow:0 1px 1px black;
+    height:0.1vh;
+    width:1vw;
+    margin-left:2vw;
+}
+
 @keyframes smoke{
     from{ 
         transform:translateY(-1rem);
