@@ -14,14 +14,13 @@ body{
 .moon{
     height:10vw;
     width:10vw;
-    position:absolute;
     left:10vw;
     top: 10vw;
     background-color:rgb(248, 248, 234);
     border-radius:100%;
     box-shadow:0px 0px 10px rgba(248, 248, 234,0.5), 0px 0px 80px rgba(248, 248, 234,0.2), 0px 0px 40px rgba(248, 248, 234,0.5), inset 0 0 10px #9c9797;
     filter:blur(0.5px);
-    animation: moonShine 60s infinite;
+    /* animation: moonShine 3s infinite; */
 }
 
 .moon::before{
@@ -51,6 +50,20 @@ body{
     bottom:2vw;
 
 }
+
+.rotatingMoon{
+    z-index:99;
+    height:100vh;
+    width:100vw;
+    padding:20px;
+    position:absolute;
+    animation:moonShine 20s infinite linear;
+    display:flex;
+    align-items:flex-start;
+    justify-content: center;
+    z-index:0;
+}
+
 
 
 .sea{
@@ -214,6 +227,45 @@ body{
     width:3vw;
     position:absolute;
     background-color:rgb(0, 0, 0);
+}
+
+.smoke{
+    display:block;
+    background-color:white;
+    width:3vw;
+    height:3vw;
+    border-radius:100%;
+    position:absolute;
+    filter: blur(7px);
+}
+
+.chemney1 .smoke{
+    animation:smoke 2s infinite;
+}
+
+.chemney2 .smoke{
+    animation:smoke 2s infinite;
+}
+
+.chemney3 .smoke{
+    animation:smoke 2s infinite;
+}
+
+.chemney4 .smoke{
+    animation:smoke 2s infinite;
+}
+
+@keyframes smoke{
+    from{ 
+        transform:translateY(-1rem);
+        opacity:1;
+    }
+    to{
+        
+    transform:translateY(-2rem) translateX(-2rem) scale(0);
+    opacity:0;
+    }
+
 }
 
 .decks{
@@ -431,14 +483,14 @@ body{
 }
 
 @keyframes moonShine {
-    0%, 100% {
-        transform:translateX(-100%) translateY(100%);
-        box-shadow:0px 0px 10px rgba(248, 248, 234,0.5), 0px 0px 80px rgba(248, 248, 234,0.2), 0px 0px 40px rgba(248, 248, 234,0.5), inset 0 0 10px #9c9797;
+    from{
+        transform:rotate(0deg) translateY(50vw) rotate(-0deg);
     }
-    50% {
-        transform:translateX(100%) translateY(-100%); 
-        box-shadow:0px 0px 10px rgba(248, 248, 234,0.5), 0px 0px 200px rgba(248, 248, 234,0.2), 0px 0px 40px rgba(248, 248, 234,0.5), inset 0 0 10px #9c9797;
+
+    to {
+        transform:rotate(360deg) translateY(50vw) rotate(-360deg);
     }
+
     
 }
 
