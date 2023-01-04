@@ -10,6 +10,10 @@ I used vw for most of my dimensions so drawing wouldn't get destroyed when upsca
 
 I haven't looked up the proper colors yet. As of today, December 9th, it is still very drafty.
 
+## Icebergs
+
+For the icebergs, I decided to use clip-path property, but it is very time consuming.
+
 ## Compatibility
 
 As of now, I have tested it on Chrome and Firefox, and both work quite well.
@@ -17,6 +21,7 @@ As of now, I have tested it on Chrome and Firefox, and both work quite well.
 2022-12-23 :
 
 - adding lifeboats.
+- adding first icebergs.
 
 2022-12-17 :
 
