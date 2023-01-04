@@ -18,10 +18,11 @@ For the icebergs, I decided to use clip-path property, but it is very time consu
 
 As of now, I have tested it on Chrome and Firefox, and both work quite well.
 
-2022-12-23 :
+2022-01-04 :
 
 - adding lifeboats.
 - adding first icebergs.
+- travelling icebergs.
 
 2022-12-17 :
 
